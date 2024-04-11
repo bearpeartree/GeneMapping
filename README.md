@@ -1,3 +1,3 @@
 # GeneMapping
 
-A small application on determining the localation of three genes on one chromosome.
+A small application on determining the location of three genes on one chromosome.
