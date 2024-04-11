@@ -22,3 +22,8 @@ def test_separate_data():
 def test_separate_data_less_genes():
     some_data = "gc vg 28 "
     assert separate_data(some_data) == ["gc vg", 28]
+
+
+def test_separate_data_single_digit():
+    some_data = "A b C 5"
+    assert separate_data(some_data) == ["A b C", 5]
