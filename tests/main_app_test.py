@@ -1,4 +1,5 @@
 from main import extract_data
+from main import separate_data
 
 def test_extract_data():
     file_name = "../ExampleFiles/GameteExample1.txt"
@@ -11,3 +12,13 @@ def test_extract_data():
                             "a B c 4",
                             "a b C 124",
                             "a b c 360"]
+
+
+def test_separate_data():
+    some_data = "A B C 349"
+    assert separate_data(some_data) == ["A B C", 349]
+
+
+def test_separate_data_less_genes():
+    some_data = "gc vg 28 "
+    assert separate_data(some_data) == ["gc vg", 28]
